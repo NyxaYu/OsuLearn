@@ -95,7 +95,7 @@ def input_data(dataset, verbose=False):
     _memo = {}
 
     if isinstance(dataset, osu_beatmap.Beatmap):
-        dataset = pd.DataFrame([dataset], columns=['beatmap'])
+        dataset = pd.DataFrame(list(zip([dataset])), columns=['beatmap'])
 
     beatmaps = dataset['beatmap']
 
